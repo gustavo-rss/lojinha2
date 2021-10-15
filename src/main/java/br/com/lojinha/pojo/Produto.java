@@ -10,13 +10,14 @@ public class Produto {
     private String marca;
     private double valor;
     private Tamanho tamanho;
-    private List<String> itensInclusos;
+    private List<ItemIncluso> itensInclusos;
 
     //constructor
     public Produto(String marcaInicial, Tamanho novoTamanho){
         this.marca = marcaInicial;
         this.tamanho = novoTamanho;
     }
+
 
     //getter
     public double getValor() {
@@ -57,11 +58,12 @@ public class Produto {
         this.tamanho = novoTamanho;
     }
 
-    public List<String> getItensInclusos() {
+
+    public List<ItemIncluso> getItensInclusos() {
         return itensInclusos;
     }
 
-    public void setItensInclusos(List<String> novoItensInclusos) {
-        this.itensInclusos = novoItensInclusos;
+    public void setItensInclusos(List<ItemIncluso> itensInclusos) {
+        this.itensInclusos = itensInclusos;
     }
 }

@@ -1,6 +1,7 @@
 package br.com.lojinha;
 
 import br.com.lojinha.enums.Tamanho;
+import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
 
 import java.util.ArrayList;
@@ -12,15 +13,16 @@ public class LojinhaApp {
 
         meuProduto.setNome("Playstation 4");
         meuProduto.setValor(1);
-        //meuProduto.setTamanho(Tamanho.MEDIO);
 
-        List<String> itensInclusos = new ArrayList<>();
-        itensInclusos.add("2 Controles"); //index 0
-        itensInclusos.add("3 Jogos"); //index 1
+        List<ItemIncluso> itensInclusos = new ArrayList<>();
+
+        ItemIncluso primeiroItemAdicional = new ItemIncluso("Controle", 2);
+
         meuProduto.setItensInclusos(itensInclusos);
 
-        System.out.println(meuProduto.getItensInclusos().get(0));
-        System.out.println(meuProduto.getTamanho());
-        System.out.println(meuProduto.getMarca());
+        System.out.println("Item adicional: " + primeiroItemAdicional.getItemNome()
+                + "\nQuantidade Item adicional: " + primeiroItemAdicional.getItemQuantidade());
+        System.out.println("Tamanho: " + meuProduto.getTamanho());
+        System.out.println("Marca: " + meuProduto.getMarca());
     }
 }
